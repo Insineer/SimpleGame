@@ -9,11 +9,13 @@
 class Location
 {
 public:
-    Location();
+    explicit Location(uf::vec2u size);
 
     // Register object
-    void AddObject(Object *);
+    void AddObject(Object *obj);
 
 private:
+    uf::vec2u size;
+
     std::vector<uptr<Object>> objects;
 };

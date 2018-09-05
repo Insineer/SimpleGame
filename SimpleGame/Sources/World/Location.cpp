@@ -1,9 +1,8 @@
 #include "Location.h"
 
-Location::Location()
-{
-
-}
+Location::Location(uf::vec2u size) :
+    size(size)
+{ }
 
 void Location::AddObject(Object *obj)
 {
