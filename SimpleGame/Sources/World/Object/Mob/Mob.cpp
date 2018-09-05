@@ -1,5 +1,7 @@
 #include "Mob.h"
 
-Mob::Mob()
+Mob::Mob(Location *loc) :
+    Object(loc)
 {
+
 }

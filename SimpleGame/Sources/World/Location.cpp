@@ -4,3 +4,8 @@ Location::Location()
 {
 
 }
+
+void Location::AddObject(Object *obj)
+{
+    objects.push_back(uptr<Object>(obj));
+}

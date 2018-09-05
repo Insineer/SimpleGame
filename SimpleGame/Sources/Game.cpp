@@ -9,7 +9,7 @@ Player CreatePlayer()
 
 Game::Game()
 {
-
+    instance = this;
 }
 
 void Game::Run()
@@ -20,6 +20,16 @@ void Game::Run()
     }
 }
 
+Game * const Game::Get()
+{
+    return instance;
+}
+
+World *Game::GetWorld()
+{
+    return &world;
+}
+
 int main()
 {
     Game game;
@@ -27,3 +37,5 @@ int main()
 
     return 0;
 }
+
+Game *Game::instance;

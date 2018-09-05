@@ -1,7 +1,10 @@
 #pragma once
-class Mob
+
+#include <World/Object/Object.h>
+
+class Mob : public Object
 {
 public:
-    Mob();
+    Mob(Location *);
 };
 

@@ -1,7 +1,8 @@
 #include "Object.h"
 
+#include <World/Location.h>
 
-
-Object::Object()
+Object::Object(Location *loc)
 {
+    loc->AddObject(this);
 }
