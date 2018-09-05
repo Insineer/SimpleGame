@@ -1,5 +1,12 @@
 #include "Game.h"
 
+#include <Player.h>
+
+Player CreatePlayer()
+{
+    return Player();
+}
+
 Game::Game()
 {
 
