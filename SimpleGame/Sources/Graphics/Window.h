@@ -4,6 +4,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <Camera.h>
+
 class Window
 {
 public:

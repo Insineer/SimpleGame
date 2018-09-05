@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Camera.cpp" />
     <ClCompile Include="Sources\Player.cpp" />
     <ClCompile Include="Sources\World\Object\Mob\Mob.cpp" />
     <ClCompile Include="Sources\World\Object\Object.cpp" />
@@ -141,8 +142,11 @@
     <ClCompile Include="Sources\Useful\Geometry\Direction.cpp" />
     <ClCompile Include="Sources\World\Location.cpp" />
     <ClCompile Include="Sources\World\World.cpp" />
+    <ClCompile Include="Sources\Graphics\TileGrid.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Camera.h" />
+    <ClInclude Include="Sources\Graphics\Widget.h" />
     <ClInclude Include="Sources\Player.h" />
     <ClInclude Include="Sources\World\Object\Mob\Mob.h" />
     <ClInclude Include="Sources\World\Object\Object.h" />
@@ -154,6 +158,7 @@
     <ClInclude Include="Sources\Useful\Types.h" />
     <ClInclude Include="Sources\World\Location.h" />
     <ClInclude Include="Sources\World\World.h" />
+    <ClInclude Include="Sources\Graphics\TileGrid.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sources\Useful\Geometry\Vec2.inl" />
