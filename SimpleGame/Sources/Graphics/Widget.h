@@ -12,7 +12,7 @@ public:
 	virtual ~Widget() = default;
 
     // draw method for Drawable inheritance
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override final;
 	// public method for Draw widget buffer to target
 	void Draw(sf::RenderTarget &target) const;
 	virtual void Update(sf::Time timeElapsed) = 0;

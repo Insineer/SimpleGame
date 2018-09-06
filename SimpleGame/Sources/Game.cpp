@@ -14,6 +14,8 @@ Game::Game()
 
 void Game::Run()
 {
+    player.Spawn();
+
     while (window.IsOpen()) 
     {
         window.Update();

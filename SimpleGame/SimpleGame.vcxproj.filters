@@ -45,6 +45,12 @@
     <ClCompile Include="Sources\Graphics\TileGrid.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\Graphics\Widget.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Graphics\GridShape.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sources\Game.h">
@@ -87,6 +93,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Graphics\TileGrid.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Graphics\GridShape.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

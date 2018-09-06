@@ -3,10 +3,9 @@
 #include <SFML/Graphics.hpp>
 
 Window::Window() :
-    window(sf::VideoMode(200, 200), "SFML works!"),
-    shape(sf::CircleShape(100))
-{ 
-    shape.setFillColor(sf::Color::Green);
+    window(sf::VideoMode(800, 600), "SFML works!"),
+    tileGrid({ 800, 600 })
+{
 }
 
 void Window::Update()
@@ -17,11 +16,12 @@ void Window::Update()
             window.close();
     }
 
-    window.clear();
-    window.draw(shape);
+    window.clear(sf::Color::Black);
+    tileGrid.Draw(window);
+    //window.draw(tileGrid);
     window.display();
 
-    fps_sleep();
+    //fps_sleep();
 }
 
 bool Window::IsOpen() const

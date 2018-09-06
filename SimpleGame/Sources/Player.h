@@ -9,7 +9,7 @@ class Player
 public:
     Player();
     
-    //Player(Player&&) = default;
+    void Spawn();
 
 private:
     Mob *mob;

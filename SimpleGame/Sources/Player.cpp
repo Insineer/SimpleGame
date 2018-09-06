@@ -4,6 +4,9 @@
 #include <World/Object/Mob/Mob.h>
 
 Player::Player()
-{ 
+{ }
+
+void Player::Spawn()
+{
     mob = Game::Get()->GetWorld()->CreateNewPlayerMob();
 }

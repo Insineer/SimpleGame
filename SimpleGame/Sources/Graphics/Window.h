@@ -4,7 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include <Camera.h>
+#include "TileGrid.h"
 
 class Window
 {
@@ -17,6 +17,8 @@ public:
 
 private:
     void fps_sleep();
+
+    TileGrid tileGrid;
 
     sf::RenderWindow window;
     sf::CircleShape shape;

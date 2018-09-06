@@ -133,7 +133,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\Graphics\GridShape.cpp" />
     <ClCompile Include="Sources\Camera.cpp" />
+    <ClCompile Include="Sources\Graphics\Widget.cpp" />
     <ClCompile Include="Sources\Player.cpp" />
     <ClCompile Include="Sources\World\Object\Mob\Mob.cpp" />
     <ClCompile Include="Sources\World\Object\Object.cpp" />
@@ -145,6 +147,7 @@
     <ClCompile Include="Sources\Graphics\TileGrid.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Sources\Graphics\GridShape.h" />
     <ClInclude Include="Sources\Camera.h" />
     <ClInclude Include="Sources\Graphics\Widget.h" />
     <ClInclude Include="Sources\Player.h" />
