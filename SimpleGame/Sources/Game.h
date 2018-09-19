@@ -4,6 +4,7 @@
 
 #include <Graphics/Window.h>
 #include <World/World.h>
+#include <ResourceManager.h>
 
 class Game
 {
@@ -18,7 +19,8 @@ public:
 
 private:
     static Game *instance;
-
+	
+	ResourceManager rm;
     Window window;
     World world;
     Player player;
