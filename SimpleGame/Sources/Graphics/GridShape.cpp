@@ -1,21 +1,23 @@
 #include "GridShape.h"
 
 GridShape::GridShape(uf::vec2u size, uf::vec2u cellSize) :
-    size(size), cellSize(cellSize)
+	size(size), cellSize(cellSize)
 {
-    for (int y = 0; y < size.y; y += cellSize.y) 
-    {
-        horizontalLinesVertices.push_back(sf::Vertex({ -32, y }));
-        horizontalLinesVertices.push_back(sf::Vertex({ size.x + 32, y }));
-    }
+	for (unsigned int y = 0; y <= size.y; y += cellSize.y)
+	{
+		horizontalLinesVertices.push_back(sf::Vertex({ -32, static_cast<float>(y) }, sf::Color::Black));
+		horizontalLinesVertices.push_back(sf::Vertex({ static_cast<float>(size.x + 32), static_cast<float>(y) }, sf::Color::Black));
+	}
 
-    for (int x = 0; x < size.x; x += cellSize.x) {
-        horizontalLinesVertices.push_back(sf::Vertex({ x, -32 }));
-        horizontalLinesVertices.push_back(sf::Vertex({ x, size.y + 32 }));
-    }
+	for (unsigned int x = 0; x <= size.x; x += cellSize.x) {
+		verticalLinesVertices.push_back(sf::Vertex({ static_cast<float>(x), -32 }, sf::Color::Black));
+		verticalLinesVertices.push_back(sf::Vertex({ static_cast<float>(x), static_cast<float>(size.y + 32) }, sf::Color::Black));
+	}
 }
 
 void GridShape::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-
+	states.transform = getTransform();
+	target.draw(verticalLinesVertices.data(), verticalLinesVertices.size(), sf::Lines, states);
+	target.draw(horizontalLinesVertices.data(), horizontalLinesVertices.size(), sf::Lines, states);
 }

@@ -9,21 +9,20 @@
 class Window
 {
 public:
-    Window();
+	Window();
 
-    void Update();
+	void Update();
 
-    bool IsOpen() const;
+	bool IsOpen() const;
 
 private:
-    void fps_sleep();
+	void fps_sleep();
 
-    TileGrid tileGrid;
+	sf::RenderWindow window;
 
-    sf::RenderWindow window;
-    sf::CircleShape shape;
+	TileGrid tileGrid;
 
-    sf::Clock frame_clock;
-    sf::Time lastFrameTime;
-    static const int req_FPS = 60;
+	sf::Clock frame_clock;
+	sf::Time lastFrameTime;
+	static const int req_FPS = 60;
 };

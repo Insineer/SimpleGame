@@ -74,5 +74,5 @@ namespace uf {
 	typedef vec2<double> vec2d;
 	typedef vec2<float>  vec2f;
 	typedef vec2<int>    vec2i;
-	typedef vec2<uint8_t>   vec2u;
+	typedef vec2<uint32_t>   vec2u;
 }
