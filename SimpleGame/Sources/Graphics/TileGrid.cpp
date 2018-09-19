@@ -11,7 +11,7 @@ TileGrid::TileGrid(uf::vec2i size) :
 void TileGrid::Update(sf::Time timeElapsed)
 {
 	pos += moving;
-	grid.setPosition(-(pos.x % 32), -(pos.y % 32));
+	grid.setPosition(pos % 32 * -1);
 }
 
 bool TileGrid::HandleEvent(sf::Event e)
@@ -37,16 +37,16 @@ bool TileGrid::HandleEvent(sf::Event e)
 	} else if(e.type == sf::Event::EventType::KeyReleased) {
 		switch(e.key.code) {
 		case sf::Keyboard::Key::Right:
-			moving.x = -sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left);
+			moving.x = -int(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left));
 			break;
 		case sf::Keyboard::Key::Left:
-			moving.x = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right);
+			moving.x = int(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right));
 			break;
 		case sf::Keyboard::Key::Down:
-			moving.y = -sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up);
+			moving.y = -int(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up));
 			break;
 		case sf::Keyboard::Key::Up:
-			moving.y = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down);
+			moving.y = int(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down));
 			break;
 		default:
 			return false;
