@@ -10,6 +10,8 @@ class World
 public:
     World();
 
+    void Update(sf::Time timeElapsed);
+
     Mob *CreateNewPlayerMob();
 
 private:

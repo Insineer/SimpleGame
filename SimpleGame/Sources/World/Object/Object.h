@@ -1,5 +1,7 @@
 #pragma once
 
+#include <SFML/System.hpp>
+
 #include <Useful/Types.h>
 
 class Location;
@@ -13,6 +15,8 @@ public:
     Object(Object &&) = default;
     Object(const Object &) = default;
     virtual ~Object() = default;
+
+    void Update(sf::Time timeElapsed);
 
     const uf::vec2u &GetPos() const;
 

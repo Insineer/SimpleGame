@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include <SFML/System.hpp>
+
 #include <Graphics/Window.h>
 #include <World/World.h>
 #include <ResourceManager.h>
@@ -24,4 +26,6 @@ private:
     Window window;
     World world;
     Player player;
+
+	sf::Clock clock;
 };

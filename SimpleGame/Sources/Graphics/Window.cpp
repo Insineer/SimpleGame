@@ -21,9 +21,8 @@ void Window::Update()
 			window.close();
 		}
 	}
-	tileGrid.Update(sf::Time());
+	tileGrid.Update(lastFrameTime);
 	tileGrid.Draw(window);
-	//window.draw(tileGrid);
 	window.display();
 }
 

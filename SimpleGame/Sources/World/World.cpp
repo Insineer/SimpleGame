@@ -8,6 +8,11 @@ World::World() :
 
 }
 
+void World::Update(sf::Time timeElapsed)
+{
+	location.Update(timeElapsed);
+}
+
 Mob *World::CreateNewPlayerMob()
 {
     return new Mob(&location, {kSpawnX, kSpawnY});

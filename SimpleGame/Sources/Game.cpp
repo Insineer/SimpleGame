@@ -14,12 +14,15 @@ Game::Game()
 
 void Game::Run()
 {
-    player.Spawn();
+	player.Spawn();
 
-    while (window.IsOpen()) 
-    {
-        window.Update();
-    }
+	while (window.IsOpen()) {
+		sf::Time timeElapsed = clock.getElapsedTime();
+		window.Update();
+
+		// TODO: should be in different thread
+		world.Update(sf::Time());
+	}
 }
 
 Game * const Game::Get()
