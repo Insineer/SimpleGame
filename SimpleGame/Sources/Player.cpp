@@ -8,5 +8,7 @@ Player::Player()
 
 void Player::Spawn()
 {
-    mob = Game::Get()->GetWorld()->CreateNewPlayerMob();
+	mob = Game::Get()->GetWorld()->CreateNewPlayerMob();
 }
+
+Mob *Player::GetMob() { return mob; }

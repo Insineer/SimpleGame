@@ -11,15 +11,16 @@
 class Location
 {
 public:
-    explicit Location(uf::vec2u size);
+	explicit Location(uf::vec2u size);
 
-    void Update(sf::Time timeElapsed);
+	void Update(sf::Time timeElapsed);
 
-    // Register object
-    void AddObject(Object *obj);
+	// Register object
+	void AddObject(Object *obj);
+	std::vector<uptr<Object>> &GetObjects();
 
 private:
-    uf::vec2u size;
+	uf::vec2u size;
 
-    std::vector<uptr<Object>> objects;
+	std::vector<uptr<Object>> objects;
 };

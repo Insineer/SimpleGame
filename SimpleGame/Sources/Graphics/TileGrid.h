@@ -9,7 +9,7 @@ class Camera;
 class TileGrid : public Widget
 {
 public:
-	TileGrid(uf::vec2i size);
+	TileGrid(uf::vec2u size);
 
 	virtual void Update(sf::Time timeElapsed);
 	virtual bool HandleEvent(sf::Event event);
@@ -21,7 +21,6 @@ protected:
 private:
 	Camera *camera;
 	uf::vec2i moving;
-	uf::vec2i pos;
 
 	GridShape grid;
 };

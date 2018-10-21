@@ -11,21 +11,24 @@
 class Game
 {
 public:
-    Game();
+	Game();
 
-    void Run();
+	void Run();
 
-    static Game * const Get();
+	static Game * const Get();
 
-    World *GetWorld();
+	ResourceManager *GetRM();
+	World *GetWorld();
+	Player *GetPlayer();
+	Window *GetWindow();
 
 private:
-    static Game *instance;
+	static Game *instance;
 	
 	ResourceManager rm;
-    Window window;
-    World world;
-    Player player;
+	World world;
+	Player player;
+	Window window;
 
 	sf::Clock clock;
 };

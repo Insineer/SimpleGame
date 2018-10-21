@@ -8,18 +8,19 @@
 class World
 {
 public:
-    World();
+	World();
+	void Init();
 
-    void Update(sf::Time timeElapsed);
+	void Update(sf::Time timeElapsed);
 
-    Mob *CreateNewPlayerMob();
+	Mob *CreateNewPlayerMob();
 
 private:
-    Location location;
+	Location location;
 
 // constants
-    static const uint8_t kLocSizeX = 100;
-    static const uint8_t kLocSizeY = 100;
-    static const uint8_t kSpawnX = 50;
-    static const uint8_t kSpawnY = 50;
+	static const uint8_t kLocSizeX = 100;
+	static const uint8_t kLocSizeY = 100;
+	static const uint8_t kSpawnX = 50;
+	static const uint8_t kSpawnY = 50;
 };

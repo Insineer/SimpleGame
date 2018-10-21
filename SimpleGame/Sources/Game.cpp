@@ -4,16 +4,17 @@
 
 Player CreatePlayer()
 {
-    return Player();
+	return Player();
 }
 
 Game::Game()
 {
-    instance = this;
+	instance = this;
 }
 
 void Game::Run()
 {
+	world.Init();
 	player.Spawn();
 
 	while (window.IsOpen()) {
@@ -27,20 +28,20 @@ void Game::Run()
 
 Game * const Game::Get()
 {
-    return instance;
+	return instance;
 }
 
-World *Game::GetWorld()
-{
-    return &world;
-}
+ResourceManager *Game::GetRM()     { return &rm;     }
+World           *Game::GetWorld()  { return &world;  }
+Player          *Game::GetPlayer() { return &player; }
+Window          *Game::GetWindow() { return &window; }
 
 int main()
 {
-    Game game;
-    game.Run();
+	Game game;
+	game.Run();
 
-    return 0;
+	return 0;
 }
 
 Game *Game::instance;

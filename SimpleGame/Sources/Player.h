@@ -1,16 +1,17 @@
 #pragma once
 
 #include <Useful/Types.h>
-
-class Mob;
+#include <World/Object/Mob/Mob.h>
 
 class Player
 {
 public:
-    Player();
-    
-    void Spawn();
+	Player();
+	
+	void Spawn();
+	
+	Mob *GetMob();
 
 private:
-    Mob *mob;
+	Mob *mob;
 };

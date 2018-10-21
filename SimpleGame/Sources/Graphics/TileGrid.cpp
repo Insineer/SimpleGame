@@ -1,8 +1,8 @@
 #include "TileGrid.h"
+#include <Game.h>
 
-TileGrid::TileGrid(uf::vec2i size) :
+TileGrid::TileGrid(uf::vec2u size) :
 	Widget(size), 
-	pos({0,0}),
 	grid(size, {32, 32})
 {
 	SetPosition({ 0, 0 });
@@ -10,8 +10,8 @@ TileGrid::TileGrid(uf::vec2i size) :
 
 void TileGrid::Update(sf::Time timeElapsed)
 {
-	pos += moving;
-	grid.setPosition(pos % 32 * -1);
+	Game::Get()->GetPlayer()->GetMob()->Move(moving);
+	grid.setPosition(uf::vec2i(Game::Get()->GetPlayer()->GetMob()->GetPos() + uf::vec2i{384, 304}) % 32 * -1);
 }
 
 bool TileGrid::HandleEvent(sf::Event e)
@@ -60,5 +60,8 @@ void TileGrid::draw() const
 {
 	buffer.clear(sf::Color::White);
 	buffer.draw(grid);
+	for(auto &obj: Game::Get()->GetPlayer()->GetMob()->GetLoc()->GetObjects()) {
+		obj->sprite.Draw(&buffer, obj->GetPos() - Game::Get()->GetPlayer()->GetMob()->GetPos() + uf::vec2i{384, 304});
+	}
 	buffer.display();
 }
