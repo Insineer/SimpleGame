@@ -1,0 +1,8 @@
+{
+    "tileSize": 32,
+    "sprites": [
+        {
+            "sprite": "tesseract"
+        }
+    ]
+}
